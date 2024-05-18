@@ -1,0 +1,6 @@
+{
+  "complierOptions" : {
+    "target": "ES5",
+    "module": "CommonJS"
+  }
+}
