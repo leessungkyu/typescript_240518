@@ -14,7 +14,7 @@
 */
 //tsc -w 러 실행 (.js 파일로 변환)
 //index.ts => index.js로 생성
-//자바스크립트에 type겁사를 강화한 버전
+//자바스크립트에 type검사를 강화한 버전
 
 
 let myName = '홍길동'
@@ -32,4 +32,28 @@ let 오브젝트 : {_name:string, _age:number,_adult:boolean} = {
   _name:'이름',
   _age: 33,
   _adult: true
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////
+// title, btn 
+let title = document.getElementById('title');
+// 버튼누르면 title태그의 html내용을 반갑습니다. 로 변경
+let btn = document.getElementById('btn');
+
+let flag = false;
+if (btn!= null){
+  btn.addEventListener('click',()=>{
+    if(title != null){
+      if(!flag){
+        title.innerHTML = '반갑습니다.' ;
+        flag = true;
+      } else {
+        title.innerHTML = '제목' ;
+        flag = false;
+      }
+    } 
+  }) 
+} else {
+  console.log('btn없음');
 }

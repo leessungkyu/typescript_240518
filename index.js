@@ -12,7 +12,7 @@
 */
 //tsc -w 러 실행 (.js 파일로 변환)
 //index.ts => index.js로 생성
-//자바스크립트에 type겁사를 강화한 버전
+//자바스크립트에 type검사를 강화한 버전
 var myName = '홍길동';
 myName = '김유신';
 //myName = 33    //자료형이 달라서 에러(타입스크립트)
@@ -27,3 +27,26 @@ var 오브젝트 = {
     _age: 33,
     _adult: true
 };
+///////////////////////////////////////////////////////////////////////////////////////////
+// title, btn 
+var title = document.getElementById('title');
+// 버튼누르면 title태그의 html내용을 반갑습니다. 로 변경
+var btn = document.getElementById('btn');
+var flag = false;
+if (btn != null) {
+    btn.addEventListener('click', function () {
+        if (title != null) {
+            if (!flag) {
+                title.innerHTML = '반갑습니다.';
+                flag = true;
+            }
+            else {
+                title.innerHTML = '제목';
+                flag = false;
+            }
+        }
+    });
+}
+else {
+    console.log('btn없음');
+}
